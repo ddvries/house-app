@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huisdetails</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <h1>Interieurstijl Dossier</h1>
+        </div>
+        <nav class="nav-links">
+          <a href="houses-list.html">Huizen</a>
+          <a href="room-form.html">Nieuwe Ruimte</a>
+          <a href="export-house.html">PDF-export</a>
+        </nav>
+      </header>
+
+      <section class="page-title">
+        <div>
+          <h2>Hoofdwoning</h2>
+          <p>Overzicht van ruimtes en de materialen die per ruimte zijn gebruikt.</p>
+        </div>
+        <a class="btn primary" href="room-form.html">Ruimte Aanmaken</a>
+      </section>
+
+      <section class="split">
+        <article class="card">
+          <h3 style="margin-top: 0;">Ruimtes</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Ruimte</th>
+                <th>Verdieping</th>
+                <th>Materialen</th>
+                <th>Acties</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Woonkamer</td>
+                <td>Begane Grond</td>
+                <td>16</td>
+                <td>
+                  <a href="room-form.html">Bewerken</a> |
+                  <a href="material-form.html">Materiaal Toevoegen</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Keuken</td>
+                <td>Begane Grond</td>
+                <td>9</td>
+                <td>
+                  <a href="room-form.html">Bewerken</a> |
+                  <a href="material-form.html">Materiaal Toevoegen</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <aside class="card">
+          <h3 style="margin-top: 0;">Huisgegevens</h3>
+          <p class="muted">Snelle metadata van dit huis.</p>
+          <div class="grid" style="margin-top: 0.8rem;">
+            <div class="chip">Plaats: Utrecht</div>
+            <div class="chip">Laatste export: 2026-03-20</div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card" style="margin-top: 1rem;">
+        <div class="page-title" style="margin-bottom: 0.4rem;">
+          <div>
+            <h2 style="font-size: 1.2rem;">Recente Materialen</h2>
+            <p>Recent bewerkte materialen in dit huis.</p>
+          </div>
+          <a class="btn warm" href="material-form.html">Materiaal Aanmaken</a>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Materiaal</th>
+              <th>Ruimte</th>
+              <th>Kleur</th>
+              <th>Links</th>
+              <th>Bijlagen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Muurverf - Noordmuur</td>
+              <td>Woonkamer</td>
+              <td>
+                <span class="chip"><span class="color-dot" style="background: #e7dcc5;"></span>#E7DCC5</span>
+              </td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Eiken Vloerdelen</td>
+              <td>Woonkamer</td>
+              <td>
+                <span class="chip"><span class="color-dot" style="background: #b4845e;"></span>#B4845E</span>
+              </td>
+              <td>1</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>
+

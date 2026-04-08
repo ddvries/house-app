@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huizen</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <h1>Interieurstijl Dossier</h1>
+        </div>
+
+        <nav class="nav-links">
+          <a href="houses-list.html">Huizen</a>
+          <a href="house-form.html">Nieuw Huis</a>
+          <a href="login.html">Uitloggen</a>
+        </nav>
+      </header>
+
+      <section class="page-title">
+        <div>
+          <h2>Jouw Huizen</h2>
+          <p>Houd ruimtes en materialen per woning bij.</p>
+        </div>
+        <a class="btn primary" href="house-form.html">Huis Aanmaken</a>
+      </section>
+
+      <section class="grid cols-3" style="margin-bottom: 1rem;">
+        <article class="card kpi">
+          <span class="muted">Totaal huizen</span>
+          <strong>3</strong>
+        </article>
+        <article class="card kpi">
+          <span class="muted">Totaal ruimtes</span>
+          <strong>19</strong>
+        </article>
+        <article class="card kpi">
+          <span class="muted">Totaal materialen</span>
+          <strong>142</strong>
+        </article>
+      </section>
+
+      <section class="card">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Huis</th>
+              <th>Locatie</th>
+              <th>Ruimtes</th>
+              <th>Laatst Bijgewerkt</th>
+              <th>Acties</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hoofdwoning</td>
+              <td>Utrecht</td>
+              <td>11</td>
+              <td>2026-03-28</td>
+              <td>
+                <a href="house-detail.html">Openen</a> |
+                <a href="house-form.html">Bewerken</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Vakantiehuis</td>
+              <td>Veluwe</td>
+              <td>5</td>
+              <td>2026-03-11</td>
+              <td>
+                <a href="house-detail.html">Openen</a> |
+                <a href="house-form.html">Bewerken</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>
+

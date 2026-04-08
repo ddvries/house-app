@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materiaal Aanmaken of Bewerken</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <h1>Interieurstijl Dossier</h1>
+        </div>
+        <nav class="nav-links">
+          <a href="house-detail.html">Terug naar Huis</a>
+          <a href="room-form.html">Terug naar Ruimte</a>
+        </nav>
+      </header>
+
+      <section class="page-title">
+        <div>
+          <h2>Materiaalformulier</h2>
+          <p>Sla technische details, links en bijlagen voor een materiaal op.</p>
+        </div>
+      </section>
+
+      <section class="split">
+        <article class="card">
+          <form action="#" method="post" enctype="multipart/form-data">
+            <div class="grid cols-2">
+              <div class="field">
+                <label for="room_id">Ruimte</label>
+                <select id="room_id" name="room_id">
+                  <option>Woonkamer</option>
+                  <option>Keuken</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="material_type">Type</label>
+                <select id="material_type" name="material_type">
+                  <option>Verf</option>
+                  <option>Tegel</option>
+                  <option>Hout</option>
+                  <option>Behang</option>
+                  <option>Overig</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="material_name">Materiaalnaam</label>
+              <input id="material_name" name="material_name" type="text" placeholder="Sikkens Alpha Rezisto Easy Clean" />
+            </div>
+
+            <div class="grid cols-2">
+              <div class="field">
+                <label for="color_hex">Kleur (HEX)</label>
+                <input id="color_hex" name="color_hex" type="text" placeholder="#E7DCC5" />
+              </div>
+              <div class="field">
+                <label for="color_picker">Kleurkiezer</label>
+                <input id="color_picker" name="color_picker" type="color" value="#e7dcc5" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="description">Beschrijving</label>
+              <textarea id="description" name="description" placeholder="Batchnummer, afwerking, leveranciersnotities, enzovoort."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="store_links">Winkellinks (een per regel)</label>
+              <textarea id="store_links" name="store_links" placeholder="https://example-shop.com/product/123\nhttps://second-shop.com/item/xyz"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="attachments">Bijlagen Uploaden (afbeeldingen, PDF's)</label>
+              <input id="attachments" name="attachments" type="file" accept=".pdf,image/*" multiple />
+            </div>
+
+            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+              <button class="btn primary" type="submit">Materiaal Opslaan</button>
+              <a class="btn ghost" href="house-detail.html">Annuleren</a>
+            </div>
+          </form>
+        </article>
+
+        <aside class="card">
+          <h3 style="margin-top: 0;">Bestaande Bijlagen</h3>
+          <div class="attachments" style="margin-top: 0.8rem;">
+            <div class="attachment">
+              <div class="placeholder-img"></div>
+              <p style="margin: 0.5rem 0 0;">wall_paint_photo.jpg</p>
+            </div>
+            <div class="attachment">
+              <div class="placeholder-img"></div>
+              <p style="margin: 0.5rem 0 0;">invoice_2024.pdf</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </body>
+</html>
+

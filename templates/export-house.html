@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huis Exporteren naar PDF</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <h1>Interieurstijl Dossier</h1>
+        </div>
+        <nav class="nav-links">
+          <a href="house-detail.html">Terug naar Huis</a>
+        </nav>
+      </header>
+
+      <section class="page-title">
+        <div>
+          <h2>Export naar PDF</h2>
+          <p>Stel in wat wordt opgenomen in de PDF-export van het huis.</p>
+        </div>
+      </section>
+
+      <section class="card" style="margin-bottom: 1rem;">
+        <form action="#" method="post">
+          <div class="grid cols-2">
+            <div class="field">
+              <label for="house_select">Huis</label>
+              <select id="house_select" name="house_select">
+                <option>Hoofdwoning</option>
+                <option>Vakantiehuis</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="sort">Materialen Sorteren Op</label>
+              <select id="sort" name="sort">
+                <option>Ruimte</option>
+                <option>Materiaaltype</option>
+                <option>Recent Bijgewerkt</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid cols-3">
+            <label class="chip" for="include_links">
+              <input id="include_links" name="include_links" type="checkbox" checked />
+              Winkellinks opnemen
+            </label>
+            <label class="chip" for="include_attachments">
+              <input id="include_attachments" name="include_attachments" type="checkbox" checked />
+              Verwijzingen naar bijlagen opnemen
+            </label>
+            <label class="chip" for="include_notes">
+              <input id="include_notes" name="include_notes" type="checkbox" checked />
+              Notities opnemen
+            </label>
+          </div>
+
+          <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.7rem;">
+            <button class="btn primary" type="submit">PDF Genereren</button>
+            <button class="btn ghost" type="button">Voorbeeld</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <h3 style="margin-top: 0;">Voorbeeldoverzicht</h3>
+        <ol>
+          <li>Metadata van het huis</li>
+          <li>Ruimte-index</li>
+          <li>Materialen per ruimte met kleur en notities</li>
+          <li>Bijlage met winkellinks</li>
+          <li>Bijlage met lijst van bijlagen</li>
+        </ol>
+      </section>
+    </div>
+  </body>
+</html>
+

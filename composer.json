@@ -1,0 +1,14 @@
+{
+  "name": "daandevries/house-app",
+  "description": "Huis materialen beheer met PHP en MariaDB",
+  "type": "project",
+  "require": {
+    "php": "^8.2",
+    "dompdf/dompdf": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}

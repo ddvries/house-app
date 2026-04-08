@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruimte Aanmaken of Bewerken</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <h1>Interieurstijl Dossier</h1>
+        </div>
+        <nav class="nav-links">
+          <a href="house-detail.html">Terug naar Huis</a>
+        </nav>
+      </header>
+
+      <section class="page-title">
+        <div>
+          <h2>Ruimteformulier</h2>
+          <p>Maak een ruimte aan en koppel deze aan een huis.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <form action="#" method="post">
+          <div class="grid cols-2">
+            <div class="field">
+              <label for="room_name">Ruimtenaam</label>
+              <input id="room_name" name="room_name" type="text" placeholder="Woonkamer" />
+            </div>
+
+            <div class="field">
+              <label for="house">Huis</label>
+              <select id="house" name="house">
+                <option>Hoofdwoning</option>
+                <option>Vakantiehuis</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid cols-2">
+            <div class="field">
+              <label for="floor">Verdieping</label>
+              <select id="floor" name="floor">
+                <option>Kelder</option>
+                <option selected>Begane Grond</option>
+                <option>Eerste Verdieping</option>
+                <option>Tweede Verdieping</option>
+                <option>Zolder</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="surface">Oppervlakte (m2)</label>
+              <input id="surface" name="surface" type="number" step="0.1" placeholder="26.5" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="room_notes">Notities</label>
+            <textarea id="room_notes" name="room_notes" placeholder="Details over deze ruimte"></textarea>
+          </div>
+
+          <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+            <button class="btn primary" type="submit">Ruimte Opslaan</button>
+            <a class="btn warm" href="material-form.html">Opslaan en Materiaal Toevoegen</a>
+            <a class="btn ghost" href="house-detail.html">Annuleren</a>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
+
