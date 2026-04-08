@@ -76,14 +76,8 @@ function appBasePath(): string
     if ($appUrl !== '') {
         $path = (string) parse_url($appUrl, PHP_URL_PATH);
         $path = '/' . trim($path, '/');
-        $configuredBasePath = $path === '/' ? '' : $path;
-
-        // Prefer configured path only when it matches the current script path.
-        // This keeps deployments working when APP_URL is stale.
-        if ($configuredBasePath !== '' && str_starts_with($scriptName, $configuredBasePath . '/')) {
-            $basePath = $configuredBasePath;
-            return $basePath;
-        }
+        $basePath = $path === '/' ? '' : $path;
+        return $basePath;
     }
 
     $basePath = $detectedBasePath;
