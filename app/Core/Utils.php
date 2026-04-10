@@ -64,6 +64,31 @@ function appBasePath(): string
 
     $detectedBasePath = '';
     $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
+
+    // Prefer the client-visible path. This avoids leaking internal alias paths
+    // (for example /studio-marie/...) into generated links.
+    $requestUri = (string) ($_SERVER['REQUEST_URI'] ?? '');
+    $requestPath = (string) parse_url($requestUri, PHP_URL_PATH);
+    if ($requestPath !== '' && str_starts_with($requestPath, '/')) {
+        $requestPath = rtrim($requestPath, '/');
+        $scriptFile = basename((string) $scriptName);
+
+        if ($scriptFile !== '' && $requestPath !== '' && str_ends_with($requestPath, '/' . $scriptFile)) {
+            $dir = str_replace('\\', '/', dirname($requestPath));
+            $dir = rtrim($dir, '/');
+            if ($dir !== '' && $dir !== '.' && $dir !== '/') {
+                $basePath = $dir;
+                return $basePath;
+            }
+        }
+
+        // If we are at a directory URL like /house-app, use that directory as base path.
+        if ($requestPath !== '' && $requestPath !== '/' && !str_contains(basename($requestPath), '.')) {
+            $basePath = $requestPath;
+            return $basePath;
+        }
+    }
+
     if (is_string($scriptName) && str_starts_with($scriptName, '/')) {
         $dir = str_replace('\\', '/', dirname($scriptName));
         $dir = rtrim($dir, '/');
