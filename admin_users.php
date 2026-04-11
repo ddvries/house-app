@@ -75,22 +75,22 @@ require __DIR__ . '/partials/layout_start.php';
   <table class="table">
     <thead>
       <tr>
-        <th>ID</th>
+        <th class="hide-mobile">ID</th>
         <th><?= e(t('auth.email')) ?></th>
         <th><?= e(t('common.role')) ?></th>
-        <th><?= e(t('admin_users.last_login')) ?></th>
-        <th><?= e(t('common.created_at')) ?></th>
+        <th class="hide-mobile"><?= e(t('admin_users.last_login')) ?></th>
+        <th class="hide-mobile"><?= e(t('common.created_at')) ?></th>
         <th><?= e(t('common.actions')) ?></th>
       </tr>
     </thead>
     <tbody>
       <?php foreach ($users as $user): ?>
         <tr>
-          <td><?= (int) $user['id'] ?></td>
+          <td class="hide-mobile"><?= (int) $user['id'] ?></td>
           <td><?= e((string) $user['email']) ?></td>
           <td><?= e(t((string) $user['role'] === 'admin' ? 'role.admin' : 'role.user')) ?></td>
-          <td><?= e((string) ($user['last_login_at'] ?? '-')) ?></td>
-          <td><?= e((string) $user['created_at']) ?></td>
+          <td class="hide-mobile"><?= e((string) ($user['last_login_at'] ?? '-')) ?></td>
+          <td class="hide-mobile"><?= e((string) $user['created_at']) ?></td>
           <td class="actions">
             <a href="/user_form.php?id=<?= (int) $user['id'] ?>"><?= e(t('common.edit')) ?></a>
             <?php if ((int) $user['id'] !== $currentUserId): ?>

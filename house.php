@@ -61,7 +61,7 @@ require __DIR__ . '/partials/layout_start.php';
       <thead>
         <tr>
           <th><?= e(t('common.room')) ?></th>
-          <th><?= e(t('common.floor')) ?></th>
+          <th class="hide-mobile"><?= e(t('common.floor')) ?></th>
           <th><?= e(t('common.materials')) ?></th>
           <th><?= e(t('common.actions')) ?></th>
         </tr>
@@ -75,7 +75,7 @@ require __DIR__ . '/partials/layout_start.php';
           <?php foreach ($roomsByFloor[$floor] as $room): ?>
             <tr>
               <td><a href="/room.php?id=<?= (int) $room['id'] ?>"><?= e((string) $room['name']) ?></a></td>
-              <td><?= e(floorLabel((string) $room['floor'])) ?></td>
+              <td class="hide-mobile"><?= e(floorLabel((string) $room['floor'])) ?></td>
               <td><?= (int) $room['material_count'] ?></td>
               <td class="actions">
                 <a class="chip" href="/room_form.php?id=<?= (int) $room['id'] ?>"><?= e(t('common.edit')) ?></a>

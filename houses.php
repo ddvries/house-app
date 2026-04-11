@@ -49,9 +49,9 @@ require __DIR__ . '/partials/layout_start.php';
     <thead>
       <tr>
         <th><?= e(t('common.house')) ?></th>
-        <th><?= e(t('common.location')) ?></th>
+        <th class="hide-mobile"><?= e(t('common.location')) ?></th>
         <th><?= e(t('common.rooms')) ?></th>
-        <th><?= e(t('common.last_updated')) ?></th>
+        <th class="hide-mobile"><?= e(t('common.last_updated')) ?></th>
         <th><?= e(t('common.actions')) ?></th>
       </tr>
     </thead>
@@ -59,9 +59,9 @@ require __DIR__ . '/partials/layout_start.php';
     <?php foreach ($houses as $house): ?>
       <tr>
         <td><a href="/house.php?id=<?= (int) $house['id'] ?>"><?= e((string) $house['name']) ?></a></td>
-        <td><?= e((string) $house['city']) ?></td>
+        <td class="hide-mobile"><?= e((string) $house['city']) ?></td>
         <td><?= (int) $house['room_count'] ?></td>
-        <td><?= e((string) $house['updated_at']) ?></td>
+        <td class="hide-mobile"><?= e((string) $house['updated_at']) ?></td>
         <td class="actions">
           <a class="btn ghost" href="/house_form.php?id=<?= (int) $house['id'] ?>" style="padding:0.3rem 0.7rem;font-size:0.82rem;"><?= e(t('common.edit')) ?></a>
           <form method="post" action="/house_delete.php" class="inline-form" onsubmit="return confirm('<?= e(t('confirm.delete_house')) ?>');">

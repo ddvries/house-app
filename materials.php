@@ -89,11 +89,11 @@ require __DIR__ . '/partials/layout_start.php';
         <thead>
           <tr>
             <th><?= e(t('common.material')) ?></th>
-            <th><?= e(t('common.color')) ?></th>
-            <th><?= e(t('materials.used_in')) ?></th>
+            <th class="hide-mobile"><?= e(t('common.color')) ?></th>
+            <th class="hide-mobile"><?= e(t('materials.used_in')) ?></th>
             <th><?= e(t('materials.usage')) ?></th>
-            <th><?= e(t('common.links')) ?></th>
-            <th><?= e(t('common.attachments')) ?></th>
+            <th class="hide-mobile"><?= e(t('common.links')) ?></th>
+            <th class="hide-mobile"><?= e(t('common.attachments')) ?></th>
             <th><?= e(t('materials.assign_to_room')) ?></th>
           </tr>
         </thead>
@@ -106,14 +106,14 @@ require __DIR__ . '/partials/layout_start.php';
                   <div class="muted" style="margin-top: 0.3rem;"><?= e((string) $item['description']) ?></div>
                 <?php endif; ?>
               </td>
-              <td>
+              <td class="hide-mobile">
                 <?php if ((string) $item['color_hex'] !== ''): ?>
                   <span class="chip"><span class="color-dot" style="background: <?= e((string) $item['color_hex']) ?>;"></span><?= e((string) $item['color_hex']) ?></span>
                 <?php else: ?>
                   -
                 <?php endif; ?>
               </td>
-              <td>
+              <td class="hide-mobile">
                 <div class="location-list">
                   <?php foreach ($item['locations'] as $location): ?>
                     <a class="chip room-link" href="/room.php?id=<?= (int) $location['room_id'] ?>"><?= e((string) $location['house_name']) ?> / <?= e((string) $location['room_name']) ?></a>
@@ -121,8 +121,8 @@ require __DIR__ . '/partials/layout_start.php';
                 </div>
               </td>
               <td><?= (int) $item['usage_count'] ?> <?= e(t('materials.times')) ?></td>
-              <td><?= (int) $item['link_count'] ?></td>
-              <td><?= (int) $item['attachment_count'] ?></td>
+              <td class="hide-mobile"><?= (int) $item['link_count'] ?></td>
+              <td class="hide-mobile"><?= (int) $item['attachment_count'] ?></td>
               <td>
                 <?php if ($allRooms !== []): ?>
                   <form method="post" action="/material_copy.php" class="copy-form">

@@ -53,7 +53,7 @@ require __DIR__ . '/partials/layout_start.php';
         <tr>
           <th><?= e(t('common.name')) ?></th>
           <th><?= e(t('common.type')) ?></th>
-          <th><?= e(t('common.color')) ?></th>
+          <th class="hide-mobile"><?= e(t('common.color')) ?></th>
           <th><?= e(t('common.actions')) ?></th>
         </tr>
       </thead>
@@ -62,7 +62,7 @@ require __DIR__ . '/partials/layout_start.php';
           <tr>
             <td><?= e((string) $material['name']) ?></td>
             <td><?= e(materialTypeLabel((string) $material['type'])) ?></td>
-            <td>
+            <td class="hide-mobile">
               <?php if ((string) $material['color_hex'] !== ''): ?>
                 <span
                   class="chip"

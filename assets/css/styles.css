@@ -364,6 +364,10 @@ form {
   white-space: nowrap;
 }
 
+.table .hide-mobile {
+  display: table-cell;
+}
+
 .actions a {
   margin-right: 0.4rem;
 }
@@ -517,20 +521,36 @@ form {
     grid-template-columns: 1fr;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .table-wrap {
+    overflow-x: visible;
+  }
+
   .table {
-    min-width: 620px;
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .table .hide-mobile {
+    display: none;
   }
 
   .table th,
   .table td {
     padding: 0.6rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .actions {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 0.35rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .actions a {

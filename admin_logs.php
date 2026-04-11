@@ -89,7 +89,7 @@ require __DIR__ . '/partials/layout_start.php';
 
 <section class="card" style="margin-bottom: 1.5rem;">
   <h3><?= e(t('admin_logs.event_distribution')) ?></h3>
-  <table>
+  <table class="table">
     <thead>
       <tr>
         <th><?= e(t('admin_logs.event_type')) ?></th>
@@ -160,11 +160,11 @@ require __DIR__ . '/partials/layout_start.php';
     </div>
   </form>
 
-  <table>
+  <table class="table">
     <thead>
       <tr>
-        <th><?= e(t('admin_logs.timestamp')) ?></th>
-        <th><?= e(t('admin_logs.ip')) ?></th>
+        <th class="hide-mobile"><?= e(t('admin_logs.timestamp')) ?></th>
+        <th class="hide-mobile"><?= e(t('admin_logs.ip')) ?></th>
         <th><?= e(t('admin_logs.event')) ?></th>
         <th><?= e(t('admin_logs.details')) ?></th>
       </tr>
@@ -173,8 +173,8 @@ require __DIR__ . '/partials/layout_start.php';
       <?php if ($filteredEntries !== []): ?>
         <?php foreach ($filteredEntries as $entry): ?>
           <tr>
-            <td style="font-size: 0.9rem; white-space: nowrap;"><?= e($entry['timestamp']) ?></td>
-            <td>
+            <td class="hide-mobile" style="font-size: 0.9rem; white-space: nowrap;"><?= e($entry['timestamp']) ?></td>
+            <td class="hide-mobile">
               <a href="?ip=<?= urlencode($entry['ip']) ?>" style="color: #0066cc; text-decoration: none; font-family: monospace;">
                 <?= e($entry['ip']) ?>
               </a>
